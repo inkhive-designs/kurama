@@ -19,14 +19,14 @@ function kurama_custom_css_mods() {
 	if ( get_theme_mod('kurama_body_font') ) :
 		$custom_css .= "body, #masthead h2 { font-family: ".esc_html(get_theme_mod('kurama_body_font','Open Sans'))."; }";
 	endif;
-	
-	if ( get_theme_mod('kurama_site_titlecolor','d8a33e') ) :
-		$custom_css .= "#masthead h1.site-title a { color: #".esc_html(get_theme_mod('header_textcolor', 'd8a33e'))."; }";
+
+	if ( get_theme_mod('kurama_site_titlecolor','#d8a33e') ) :
+		$custom_css .= "#masthead h1.site-title a { color: ".esc_html( get_theme_mod('kurama_site_titlecolor', '#d8a33e') )."; }";
 	endif;
-	
-	
-	if ( get_theme_mod('kurama_header_desccolor','#FFF') ) :
-		$custom_css .= "#masthead h2.site-description { color: ".esc_html(get_theme_mod('kurama_header_desccolor','#FFF'))."; }";
+
+
+	if ( get_theme_mod('kurama_header_desccolor','#d8a33e') ) :
+		$custom_css .=  "#masthead h2.site-description { color: ".esc_html( get_theme_mod('kurama_header_desccolor','#d8a33e') )."; }";
 	endif;
 	
 	if ( !display_header_text() ) :
