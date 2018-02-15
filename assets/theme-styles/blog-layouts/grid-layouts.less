@@ -32,12 +32,13 @@
     img {
       .transition(0.4s all ease);
     }
-    &:hover {
-      img {
-        .transition(0.4s all ease);
-        .transform( scale(1.1) );
+    @media screen and (min-width: 767px) {
+      &:hover {
+        img {
+          .transition(0.4s all ease);
+          .transform(scale(1.1));
 
-
+        }
       }
     }
   }
@@ -45,7 +46,7 @@
     @media screen and (max-width: 768px) {
       padding: 10px 3px;
     }
-    h1 {
+    h3 {
       margin: 5px 0;
       margin-top: 1px;
       font-weight: normal;

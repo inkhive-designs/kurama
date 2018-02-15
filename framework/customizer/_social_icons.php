@@ -13,7 +13,42 @@ $wp_customize->add_section('kurama_social_section', array(
     'panel'   => 'kurama_header_panel'
 ));
 
-$social_networks = array( //Redefinied in Sanitization Function.
+
+    //social icons style
+    $social_style = array(
+        'none'  => __('Default', 'kurama'),
+        'style1'   => __('Style 1', 'kurama'),
+        'style2'   => __('Style 2', 'kurama'),
+        'hvr-shutter-out-horizontal'   => __('Style 3', 'kurama'),
+    );
+    $wp_customize->add_setting(
+        'kurama_social_icon_style_set', array(
+        'sanitize_callback' => 'kurama_sanitize_social_style',
+        'default' => 'none'
+    ));
+
+
+    function kurama_sanitize_social_style( $input ) {
+        if ( in_array($input, array('none','style1','style2','hvr-shutter-out-horizontal') ) )
+            return $input;
+        else
+            return '';
+    }
+
+
+
+
+    $wp_customize->add_control( 'kurama_social_icon_style_set', array(
+        'settings' => 'kurama_social_icon_style_set',
+        'label' => __('Social Icon Style ','kurama'),
+        'description' => __('You can choose your icon style','kurama'),
+        'section' => 'kurama_social_section',
+        'type' => 'select',
+        'choices' => $social_style,
+    ));
+
+
+    $social_networks = array( //Redefinied in Sanitization Function.
     'none' => __('-','kurama'),
     'facebook' => __('Facebook','kurama'),
     'twitter' => __('Twitter','kurama'),

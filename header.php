@@ -9,7 +9,6 @@
 ?>
 <?php get_template_part('modules/header/head'); ?>
 
-
 <body <?php body_class(); ?>>
 <div id="page" class="hfeed site">
 	<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'kurama' ); ?></a>
@@ -22,13 +21,11 @@
 		<div id="head" class="container-fluid">
 			<?php get_template_part('modules/header/masthead'); ?>
 			<?php get_template_part('modules/header/header-image'); ?>
+		</div>
 
-		
-	</div>	
 	</div>
-	<?php get_template_part('featured', 'area1'); ?>
-	
-	
+	<?php get_template_part('framework/featured-components/featured', 'area1'); ?>
+	<?php get_template_part('framework/featured-components/featured', 'area2'); ?>
+
 	<div class="mega-container">
-						
 		<div id="content" class="site-content container">

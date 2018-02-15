@@ -19,31 +19,31 @@ function kurama_customize_register_header( $wp_customize ) {
     $wp_customize->get_section( 'title_tagline' )->panel =  'kurama_header_panel';
 
 
-    $wp_customize->add_setting( 'kurama_logo_resize' , array(
-        'default'     => 100,
-        'sanitize_callback' => 'kurama_sanitize_positive_number',
-    ) );
-    $wp_customize->add_control(
-        'kurama_logo_resize',
-        array(
-            'label' => __('Resize & Adjust Logo','kurama'),
-            'section' => 'title_tagline',
-            'settings' => 'kurama_logo_resize',
-            'priority' => 6,
-            'type' => 'range',
-            'active_callback' => 'kurama_logo_enabled',
-            'input_attrs' => array(
-                'min'   => 30,
-                'max'   => 200,
-                'step'  => 5,
-            ),
-        )
-    );
-
-    function kurama_logo_enabled($control) {
-        $option = $control->manager->get_setting('custom_logo');
-        return $option->value() == true;
-    }
+//    $wp_customize->add_setting( 'kurama_logo_resize' , array(
+//        'default'     => 100,
+//        'sanitize_callback' => 'kurama_sanitize_positive_number',
+//    ) );
+//    $wp_customize->add_control(
+//        'kurama_logo_resize',
+//        array(
+//            'label' => __('Resize & Adjust Logo','kurama'),
+//            'section' => 'title_tagline',
+//            'settings' => 'kurama_logo_resize',
+//            'priority' => 6,
+//            'type' => 'range',
+//            'active_callback' => 'kurama_logo_enabled',
+//            'input_attrs' => array(
+//                'min'   => 30,
+//                'max'   => 200,
+//                'step'  => 5,
+//            ),
+//        )
+//    );
+//
+//    function kurama_logo_enabled($control) {
+//        $option = $control->manager->get_setting('custom_logo');
+//        return $option->value() == true;
+//    }
     //Settings for Header Image
     $wp_customize->add_setting( 'kurama_himg_style' , array(
         'default'     => true,

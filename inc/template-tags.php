@@ -18,7 +18,7 @@ function kurama_paging_nav() {
 	}
 	?>
 	<nav class="navigation paging-navigation" role="navigation">
-		<h1 class="screen-reader-text"><?php _e( 'Posts navigation', 'kurama' ); ?></h1>
+		<h3 class="screen-reader-text"><?php esc_html_e( 'Posts navigation', 'kurama' ); ?></h3>
 		<div class="nav-links">
 
 			<?php if ( get_next_posts_link() ) : ?>
@@ -49,7 +49,7 @@ function kurama_post_nav() {
 	}
 	?>
 	<nav class="navigation post-navigation" role="navigation">
-		<h1 class="screen-reader-text"><?php _e( 'Post navigation', 'kurama' ); ?></h1>
+		<h3 class="screen-reader-text"><?php esc_html_e( 'Post navigation', 'kurama' ); ?></h3>
 		<div class="nav-links">
 			<?php
 				previous_post_link( '<div class="nav-previous">%link</div>', _x( '<span class="meta-nav">&larr;</span>&nbsp;%title', 'Previous post link', 'kurama' ) );
@@ -161,13 +161,12 @@ if ( ! function_exists( 'kurama_comment' ) ) :
  * Used as a callback by wp_list_comments() for displaying the comments.
  */
 function kurama_comment( $comment, $args, $depth ) {
-	$GLOBALS['comment'] = $comment;
 
 	if ( 'pingback' == $comment->comment_type || 'trackback' == $comment->comment_type ) : ?>
 
 	<li id="comment-<?php comment_ID(); ?>" <?php comment_class(); ?>>
 		<div class="comment-body">
-			<?php _e( 'Pingback:', 'kurama' ); ?> <?php comment_author_link(); ?> <?php edit_comment_link( __( 'Edit', 'kurama' ), '<span class="edit-link">', '</span>' ); ?>
+			<?php esc_html_e( 'Pingback:', 'kurama' ); ?> <?php comment_author_link(); ?> <?php edit_comment_link( __( 'Edit', 'kurama' ), '<span class="edit-link">', '</span>' ); ?>
 		</div>
 
 	<?php else : ?>
@@ -188,7 +187,7 @@ function kurama_comment( $comment, $args, $depth ) {
 				</div><!-- .comment-metadata -->
 
 				<?php if ( '0' == $comment->comment_approved ) : ?>
-				<p class="comment-awaiting-moderation"><?php _e( 'Your comment is awaiting moderation.', 'kurama' ); ?></p>
+				<p class="comment-awaiting-moderation"><?php esc_html_e( 'Your comment is awaiting moderation.', 'kurama' ); ?></p>
 				<?php endif; ?>
 			</footer><!-- .comment-meta -->
 

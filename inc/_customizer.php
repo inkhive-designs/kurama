@@ -105,9 +105,7 @@ function kurama_customize_register( $wp_customize ) {
             )
         )
     );
-
-
-
+    
     //Settings for Nav Area
     $wp_customize->add_setting( 'kurama_disable_active_nav' , array(
         'default'     => true,

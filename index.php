@@ -16,7 +16,7 @@ get_header(); ?>
 	<div id="primary" class="content-areas <?php do_action('kurama_primary-width') ?>">
 		<main id="main" class="site-main" role="main">
 		<div class="section-title home-title">
-			<span><div><?php _e('Recent Posts','kurama'); ?></div></span>
+			<span><div><?php esc_html_e('Recent Posts','kurama'); ?></div></span>
 		</div>	
 		<?php if ( have_posts() ) : ?>
 

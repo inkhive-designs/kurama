@@ -19,7 +19,6 @@ function kurama_custom_css_mods() {
 	if ( get_theme_mod('kurama_body_font') ) :
 		$custom_css .= "body, #masthead h2 { font-family: ".esc_html(get_theme_mod('kurama_body_font','Open Sans'))."; }";
 	endif;
-
 	if ( get_theme_mod('kurama_site_titlecolor','#d8a33e') ) :
 		$custom_css .= "#masthead h1.site-title a { color: ".esc_html( get_theme_mod('kurama_site_titlecolor', '#d8a33e') )."; }";
 	endif;
@@ -32,11 +31,6 @@ function kurama_custom_css_mods() {
 	if ( !display_header_text() ) :
 		$custom_css .= "#masthead .site-branding #text-title-desc { display: none; }";
 	endif;
-	
-	if ( get_theme_mod('kurama_logo_resize') ) :
-		$val = esc_html(get_theme_mod('kurama_logo_resize')/100);
-		$custom_css .= "#masthead .custom-logo { -webkit-transform-origin: center center; transform-origin: center center;transform: scale(".$val."); -webkit-transform: scale(".$val."); -moz-transform: scale(".$val."); -ms-transform: scale(".$val."); }";
-		endif;
 		
 	wp_add_inline_style('kurama-main-theme-style', $custom_css)	;
 

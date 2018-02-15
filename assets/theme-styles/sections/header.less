@@ -81,7 +81,7 @@
     //font-weight: light;
     margin-top: 0px;
     a {
-      color: @onaccent;
+      //color: @onaccent;
     }
   }
   h2.site-description {
@@ -99,12 +99,6 @@
   }
 }
 
-#site-logo {
-  display: inline-block;
-  @media screen and (max-width: 768px) {
-    float: none;
-  }
-}
 .head-full {
   background: @accent;
 }
@@ -134,5 +128,27 @@
 
 #head:hover {
   &:after {
+  }
+}
+//logo
+.site-logo {
+  display: inline-block;
+  float: none;
+  text-align: center;
+  margin-bottom: 22px;
+  max-width: 100px;
+  max-height: 100px;
+  @media screen and (max-width: 767px) {
+    float: none;
+    max-width: 40px;
+    max-height: 40px;
+    margin-bottom: 10px;
+    display: inline-block;
+  }
+  @media screen and (min-width: 768px) and (max-width: 991px) {
+    float: none;
+    max-width: 60px;
+    max-height: 60px;
+    display: inline-block;
   }
 }

@@ -71,11 +71,20 @@ if ( ! function_exists( 'kurama_setup' ) ) :
             'search-form', 'comment-form', 'comment-list', 'gallery', 'caption',
         ) );
 
-        add_theme_support( 'custom-logo' );
+        add_theme_support( 'custom-logo');
 
-        add_image_size('kurama-pop-thumb',542, 383, true );
+        add_image_size('kurama-pop-thumb',542, 340, true );
         add_image_size('kurama-pop-thumb-half',592, 225, true );
         add_image_size('kurama-poster-thumb',542, 680, true );
+
+
+
+
+        // Set up the WordPress core custom background feature.
+        add_theme_support( 'custom-background', apply_filters( 'kurama_custom_background_args', array(
+            'default-color' => 'ffffff',
+            'default-image' => '',
+        ) ) );
     }
 endif; // kurama_setup
 add_action( 'after_setup_theme', 'kurama_setup' );

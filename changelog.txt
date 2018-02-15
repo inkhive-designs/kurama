@@ -28,5 +28,18 @@ Version 1.0.1
 
 	i) Bug Fixes.
 	ii) Added pro version link.
-	iii) Added option to hide title/tagline with logo enabled.	
+	iii) Added option to hide title/tagline with logo enabled.
+
+Version: 1.0.2
+ `
+    i) Update Framework.`
+    ii) Header Image bug fixed.
+    iii) Add Social Icons styles.
+    iv) Blog Layout bug fixed.
+    v) Added skins.
+    vi) Featured Areas bug fixed.
+    vii) Add Cus custom logo.
+    viii) Footer Menu bug fixed.
+
+
 	

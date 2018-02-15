@@ -18,8 +18,8 @@
 								<a href="<?php the_permalink() ?>"><img src="<?php echo get_template_directory_uri()."/assets/images/placeholder2.jpg"; ?>"></a>
 						<?php endif; ?>
 							<div class="titledesc">
-				            <h2><a href="<?php the_permalink() ?>"><?php echo the_title(); ?></a></h2>
-				            <span class="readmore title-font"><a href="<?php the_permalink() ?>"><?php _e('Read More','kurama') ?></a></span>
+				            <h3><a href="<?php the_permalink() ?>"><?php echo the_title(); ?></a></h3>
+				            <span class="readmore title-font"><a href="<?php the_permalink() ?>"><?php esc_html_e('Read More','kurama') ?></a></span>
 				        </div>
 				    	</div>	
 				        <div class="postdate">

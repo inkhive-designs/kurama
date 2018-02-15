@@ -19,7 +19,7 @@
 
 	<footer id="colophon" class="site-footer" role="contentinfo">
 		<div class="site-info container">
-			<?php printf( __( 'Theme Designed by %1$s.', 'kurama' ), '<a href="'.esc_url("http://inkhive.com/").'" rel="designer">InkHive.com</a>' ); ?>
+			<?php printf( __( 'Theme Designed by %1$s.', 'kurama' ), '<a target="blank" href="'.esc_url("http://inkhive.com/").'" rel="designer">InkHive.com</a>' ); ?>
 			<span class="sep"></span>
 			<?php echo ( get_theme_mod('kurama_footer_text') == '' ) ? ('&copy; '.date('Y').' '.get_bloginfo('name').__('. All Rights Reserved. ','kurama')) : esc_html( get_theme_mod('kurama_footer_text') ); ?>
 		</div><!-- .site-info -->

@@ -1,8 +1,8 @@
 <header id="masthead" class="site-header col-md-3 col-sm-5 col-xs-12" role="banner">
     <div class="site-branding">
-        <?php if ( kurama_has_logo() ) : ?>
-            <div id="site-logo">
-                <a href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php kurama_logo(); ?></a>
+        <?php if ( function_exists( 'the_custom_logo' ) ) : ?>
+            <div class="site-logo">
+                <?php the_custom_logo();?>
             </div>
         <?php endif; ?>
         <div id="text-title-desc">

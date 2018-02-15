@@ -7,7 +7,6 @@
  */
 
 function kurama_customize_register_layouts( $wp_customize ) {
-    $wp_customize->get_section('background_image')->panel = 'kurama_design_panel';
 // Layout and Design
 $wp_customize->add_panel( 'kurama_design_panel', array(
     'priority'       => 3,
@@ -15,8 +14,10 @@ $wp_customize->add_panel( 'kurama_design_panel', array(
     'theme_supports' => '',
     'title'          => __('Design & Layout','kurama'),
 ) );
+    $wp_customize->get_section('background_image')->panel = 'kurama_design_panel';
 
-$wp_customize->add_section(
+
+    $wp_customize->add_section(
     'kurama_design_options',
     array(
         'title'     => __('Blog Layout','kurama'),

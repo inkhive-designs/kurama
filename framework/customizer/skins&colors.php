@@ -9,7 +9,7 @@ function kurama_customize_register_skins( $wp_customize )
 {
 //Replace Header Text Color with, separate colors for Title and Description
     $wp_customize->get_control('header_textcolor')->label = __('Site Title Color', 'kurama');
-
+    $wp_customize->remove_section('colors');
     //Select the Default Theme Skin
     $wp_customize->add_section(
         'kurama_skin_options',
@@ -59,9 +59,9 @@ function kurama_customize_register_skins( $wp_customize )
     );
 
     $skins = array( 'default' => __('Default (Maroon)','kurama'),
-        'brown' =>  __('Brown','kurama'),
-        'green' => __('Green','kurama'),
-        'red'   => __('Red','kurama'));
+        'raisinblack' =>  __('Raisin Black','kurama'),
+        'charcoal' => __('Charcoal','kurama'),
+        'green'   => __('Green','kurama'));
 
 
     $wp_customize->add_control(
@@ -74,7 +74,7 @@ function kurama_customize_register_skins( $wp_customize )
     );
 
     function kurama_sanitize_skin( $input ) {
-        if ( in_array($input, array('default','orange','brown','green','grayscale','red') ) )
+        if ( in_array($input, array('default','raisinblack','charcoal','grayscale','green') ) )
             return $input;
         else
             return '';

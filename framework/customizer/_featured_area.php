@@ -8,8 +8,6 @@
 
 function kurama_customize_featured_posts( $wp_customize )
 {
-
-
 // CREATE THE FCA PANEL
     $wp_customize->add_panel('kurama_fca_panel', array(
         'priority' => 40,
@@ -60,5 +58,6 @@ function kurama_customize_featured_posts( $wp_customize )
             )
         )
     );
+
 }
 add_action( 'customize_register', 'kurama_customize_featured_posts' );

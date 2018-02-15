@@ -33,6 +33,15 @@ function kurama_custom_header_setup() {
 		'admin-head-callback'    => 'kurama_admin_header_style',
 		'admin-preview-callback' => 'kurama_admin_header_image',
 	) ) );
+
+	register_default_headers( array(
+			'default-image'    => array(
+				'url'            => '%s/assets/images/header.jpg',
+				'thumbnail_url'    => '%s/assets/images/header.jpg',
+				'description'    => __('Default Header Image', 'kurama')
+			)
+		)
+	);
 }
 add_action( 'after_setup_theme', 'kurama_custom_header_setup' );
 
@@ -49,7 +58,7 @@ function kurama_header_style() {
 			background-image: url(<?php header_image(); ?>);
 			background-size: <?php echo esc_html(get_theme_mod('kurama_himg_style','cover')); ?>;
 			background-position-x: <?php echo esc_html(get_theme_mod('kurama_himg_align','center')); ?>;
-			background-repeat: <?php echo get_theme_mod('kurama_himg_repeat') ? "repeat" : "no-repeat" ?>;
+			background-repeat: <?php echo  esc_html(get_theme_mod('kurama_himg_repeat')) ? "repeat" : "no-repeat" ?>;
 		}
 	</style>	
 	<?php
