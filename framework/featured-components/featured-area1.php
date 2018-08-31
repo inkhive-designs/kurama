@@ -5,7 +5,7 @@
 		
 		<?php /* Start the Loop */ $count=0; ?>
 				<?php
-		    		$args = array( 'posts_per_page' => 4, 'category' => get_theme_mod('kurama_box_cat') );
+		    		$args = array( 'posts_per_page' => 5, 'category' => get_theme_mod('kurama_box_cat') );
 					$lastposts = get_posts( $args );
 					foreach ( $lastposts as $post ) :
 					  setup_postdata( $post ); ?>

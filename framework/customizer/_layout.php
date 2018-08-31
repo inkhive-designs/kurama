@@ -174,5 +174,23 @@ $wp_customize->add_control(
         'type' => 'text'
     )
 );
+
+$wp_customize->add_section(
+	    'kurama_pro_layout',
+	    array(
+		    'title'	=> __('More Layout Options in Kurama Plus', 'kurama'),
+		    'panel'	=> 'kurama_design_panel',
+		    'priority'	=> 100
+	    )
+    );
+    
+    $wp_customize->add_control(
+	    'kurama_pro_control_layout',
+	    array(
+		    'label'		=> __('You shouldn\'t be here', 'kurama'),
+		    'settings'	=> array(),
+		    'section'	=> 'kurama_pro_layout'
+	    )
+    );
 }
 add_action( 'customize_register', 'kurama_customize_register_layouts' );

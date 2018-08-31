@@ -58,6 +58,24 @@ function kurama_customize_featured_posts( $wp_customize )
             )
         )
     );
+    
+    $wp_customize->add_section(
+	    'kurama_pro_fa',
+	    array(
+		    'title'	=> __('More Featured Areas in Kurama Plus', 'kurama'),
+		    'panel'	=> 'kurama_fca_panel',
+		    'priority'	=> 15
+	    )
+    );
+    
+    $wp_customize->add_control(
+	    'kurama_pro_control_fa',
+	    array(
+		    'label'		=> __('You shouldn\'t be here', 'kurama'),
+		    'settings'	=> array(),
+		    'section'	=> 'kurama_pro_fa'
+	    )
+    );
 
 }
 add_action( 'customize_register', 'kurama_customize_featured_posts' );

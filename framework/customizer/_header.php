@@ -109,6 +109,24 @@ function kurama_customize_register_header( $wp_customize ) {
         'settings' => 'kurama_himg_repeat',
         'type' => 'checkbox',
     ) );
+    
+    $wp_customize->add_section(
+	    'kurama_pro_header',
+	    array(
+		    'title'	=> __('More Header Options in Kurama Plus', 'kurama'),
+		    'panel'	=> 'kurama_header_panel',
+		    'priority'	=> 100
+	    )
+    );
+    
+    $wp_customize->add_control(
+	    'kurama_pro_control_header',
+	    array(
+		    'label'		=> __('You shouldn\'t be here', 'kurama'),
+		    'settings'	=> array(),
+		    'section'	=> 'kurama_pro_header'
+	    )
+    );
 
 }
 add_action( 'customize_register', 'kurama_customize_register_header' );

@@ -41,5 +41,9 @@ Version: 1.0.2
     vii) Add Cus custom logo.
     viii) Footer Menu bug fixed.
 
+Version 1.0.3
 
+	i) Fixed Social Icons
+	ii) Improved Customizer
+	iii) Minor Bug Fixes
 	

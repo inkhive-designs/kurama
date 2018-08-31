@@ -50,12 +50,11 @@ $wp_customize->add_section('kurama_social_section', array(
 
     $social_networks = array( //Redefinied in Sanitization Function.
     'none' => __('-','kurama'),
-    'facebook' => __('Facebook','kurama'),
+    'facebook-f' => __('Facebook','kurama'),
     'twitter' => __('Twitter','kurama'),
     'google-plus' => __('Google Plus','kurama'),
     'instagram' => __('Instagram','kurama'),
     'rss' => __('RSS Feeds','kurama'),
-    'vine' => __('Vine','kurama'),
     'vimeo-square' => __('Vimeo','kurama'),
     'youtube' => __('Youtube','kurama'),
     'flickr' => __('Flickr','kurama'),
@@ -63,7 +62,7 @@ $wp_customize->add_section('kurama_social_section', array(
 
 $social_count = count($social_networks);
 
-for ($x = 1 ; $x <= ($social_count - 3) ; $x++) :
+for ($x = 1 ; $x <= ($social_count - 2) ; $x++) :
 
     $wp_customize->add_setting(
         'kurama_social_'.$x, array(
@@ -97,13 +96,12 @@ endfor;
 function kurama_sanitize_social( $input ) {
     $social_networks = array(
         'none' ,
-        'facebook',
+        'facebook-f',
         'twitter',
-        'google-plus',
+        'google-plus-g',
         'instagram',
         'rss',
-        'vine',
-        'vimeo-square',
+        'vimeo-v',
         'youtube',
         'flickr'
     );
