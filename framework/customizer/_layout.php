@@ -29,7 +29,9 @@ $wp_customize->add_panel( 'kurama_design_panel', array(
 
 $wp_customize->add_setting(
     'kurama_blog_layout',
-    array( 'sanitize_callback' => 'kurama_sanitize_blog_layout' )
+    array( 
+    'grid'	=> 'kurama',
+    'sanitize_callback' => 'kurama_sanitize_blog_layout' )
 );
 
 function kurama_sanitize_blog_layout( $input ) {
@@ -65,7 +67,9 @@ $wp_customize->add_section(
 
 $wp_customize->add_setting(
     'kurama_disable_sidebar',
-    array( 'sanitize_callback' => 'kurama_sanitize_checkbox' )
+    array( 
+    'default'	=> '',
+    'sanitize_callback' => 'kurama_sanitize_checkbox' )
 );
 
 $wp_customize->add_control(
@@ -74,13 +78,14 @@ $wp_customize->add_control(
         'label'    => __( 'Disable Sidebar Everywhere.','kurama' ),
         'section'  => 'kurama_sidebar_options',
         'type'     => 'checkbox',
-        'default'  => false
     )
 );
 
 $wp_customize->add_setting(
     'kurama_disable_sidebar_home',
-    array( 'sanitize_callback' => 'kurama_sanitize_checkbox' )
+    array( 
+    'default'	=> '',
+    'sanitize_callback' => 'kurama_sanitize_checkbox' )
 );
 
 $wp_customize->add_control(
@@ -89,14 +94,15 @@ $wp_customize->add_control(
         'label'    => __( 'Disable Sidebar on Home/Blog.','kurama' ),
         'section'  => 'kurama_sidebar_options',
         'type'     => 'checkbox',
-        'active_callback' => 'kurama_show_sidebar_options',
-        'default'  => false
+        'active_callback' => 'kurama_show_sidebar_options'
     )
 );
 
 $wp_customize->add_setting(
     'kurama_disable_sidebar_front',
-    array( 'sanitize_callback' => 'kurama_sanitize_checkbox' )
+    array( 
+    'default'	=> '',
+    'sanitize_callback' => 'kurama_sanitize_checkbox' )
 );
 
 $wp_customize->add_control(
@@ -105,8 +111,7 @@ $wp_customize->add_control(
         'label'    => __( 'Disable Sidebar on Front Page.','kurama' ),
         'section'  => 'kurama_sidebar_options',
         'type'     => 'checkbox',
-        'active_callback' => 'kurama_show_sidebar_options',
-        'default'  => false
+        'active_callback' => 'kurama_show_sidebar_options'
     )
 );
 
@@ -115,7 +120,9 @@ $wp_customize->add_setting(
     'kurama_sidebar_width',
     array(
         'default' => 4,
-        'sanitize_callback' => 'kurama_sanitize_positive_number' )
+        'sanitize_callback' => 'kurama_sanitize_positive_number',
+        'transport'	=> 'postMessage'
+         )
 );
 
 $wp_customize->add_control(

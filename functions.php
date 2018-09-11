@@ -30,3 +30,9 @@ require get_template_directory() . '/inc/extras.php';
  * Customizer additions.
  */
 require get_template_directory() . '/inc/customizer.php';
+
+/**
+ *	Plugin Recommendation
+ */
+ 
+require get_template_directory() . '/framework/tgmpa.php';

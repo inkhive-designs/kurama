@@ -46,7 +46,7 @@ function kurama_customize_register_header( $wp_customize ) {
 //    }
     //Settings for Header Image
     $wp_customize->add_setting( 'kurama_himg_style' , array(
-        'default'     => true,
+        'default'     => 'cover',
         'sanitize_callback' => 'kurama_sanitize_himg_style'
     ) );
 
@@ -71,7 +71,7 @@ function kurama_customize_register_header( $wp_customize ) {
     ) );
 
     $wp_customize->add_setting( 'kurama_himg_align' , array(
-        'default'     => true,
+        'default'     => 'center',
         'sanitize_callback' => 'kurama_sanitize_himg_align'
     ) );
 

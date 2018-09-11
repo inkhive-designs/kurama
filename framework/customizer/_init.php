@@ -12,7 +12,7 @@
 function kurama_customize_register( $wp_customize ) {
     $wp_customize->get_setting( 'blogname' )->transport         = 'postMessage';
     $wp_customize->get_setting( 'blogdescription' )->transport  = 'postMessage';
-
+	$wp_customize->get_setting( 'header_textcolor' )->transport	= 'postMessage';
    
 
     $wp_customize->add_section(
@@ -34,7 +34,9 @@ function kurama_customize_register( $wp_customize ) {
 
     $wp_customize->add_setting(
         'kurama_featimg',
-        array( 'sanitize_callback' => 'kurama_sanitize_featimg_layout' )
+        array( 
+        'default'			=> 'replace',
+        'sanitize_callback' => 'kurama_sanitize_featimg_layout' )
     );
 
     function kurama_sanitize_featimg_layout( $input ) {

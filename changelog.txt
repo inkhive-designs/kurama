@@ -46,4 +46,11 @@ Version 1.0.3
 	i) Fixed Social Icons
 	ii) Improved Customizer
 	iii) Minor Bug Fixes
+
+Version 1.0.4
+
+	i) Added Full Width Page
+	ii) Added Support for WPForms
+	iii) Improved Customizer
+	iv) Minor Bug Fixes
 	

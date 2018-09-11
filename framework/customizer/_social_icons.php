@@ -67,7 +67,8 @@ for ($x = 1 ; $x <= ($social_count - 2) ; $x++) :
     $wp_customize->add_setting(
         'kurama_social_'.$x, array(
         'sanitize_callback' => 'kurama_sanitize_social',
-        'default' => 'none'
+        'default' => 'none',
+        'transport'	=> 'postMessage'
     ));
 
     $wp_customize->add_control( 'kurama_social_'.$x, array(
