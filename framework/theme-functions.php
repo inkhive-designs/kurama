@@ -142,6 +142,25 @@ function kurama_get_blog_layout(){
 }
 add_action('kurama_blog_layout', 'kurama_get_blog_layout');
 
+function kurama_blog_excerpt_length( $length ) {
+	return 30;
+}
+add_filter('excerpt_length', 'kurama_blog_excerpt_length');
+
+function kurama_blog_excerpt_more( $more ) {
+	return '...';
+}
+add_filter('excerpt_more', 'kurama_blog_excerpt_more');
+
+
+/**
+ *	Setting up a PHP constant for use in WP Forms Lite Plugin
+**/
+
+
+if ( ! defined( 'WPFORMS_SHAREASALE_ID' ) ) {
+	define( 'WPFORMS_SHAREASALE_ID', '1802605' );
+}
 
 
 /*

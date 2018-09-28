@@ -30,7 +30,7 @@ $wp_customize->add_panel( 'kurama_design_panel', array(
 $wp_customize->add_setting(
     'kurama_blog_layout',
     array( 
-    'grid'	=> 'kurama',
+    'default'	=> 'kurama',
     'sanitize_callback' => 'kurama_sanitize_blog_layout' )
 );
 
