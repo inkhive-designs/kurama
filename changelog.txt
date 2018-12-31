@@ -53,4 +53,15 @@ Version 1.0.4
 	ii) Added Support for WPForms
 	iii) Improved Customizer
 	iv) Minor Bug Fixes
+
+Version 1.0.5
+
+    i) Fixed Layout
+    ii) Minor Bug Fixes
+
+Version 1.0.6
+
+    i) Gutenberg Ready
+    ii) Social Icon Issues Fixed
+    iii) Minor Bug Fixes
 	

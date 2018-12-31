@@ -1,9 +1,6 @@
 <?php
 /**
  * Created by PhpStorm.
- * User: Gourav
- * Date: 2/3/2018
- * Time: 10:58 AM
  */
 function kurama_customize_register_social( $wp_customize ) {
 // Social Icons
